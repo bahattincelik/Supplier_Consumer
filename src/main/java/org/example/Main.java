@@ -7,8 +7,18 @@ import java.util.function.Supplier;
 public class Main {
     public static void main(String[] args) {
 
+        Runnable halloRunnable = new HalloRunnable();
+        Thread halloThread = new Thread(halloRunnable);
+        halloThread.start();
 
-        Thread halloThread = new Thread(()-> {
+
+
+       /* HalloThread halloThread = new HalloThread();
+        halloThread.start();
+*/
+
+
+       /* Thread halloThread = new Thread(()-> {
             try {
                 while (true) {
                     Supplier<String> tagesZeitenSupplier =() -> {
@@ -55,11 +65,15 @@ public class Main {
                 System.out.println("Hallo-Thread wurde unterbrochen.");
             }
 
-        });
+        });*/
 
-        halloThread.start();
+        //halloThread.start();
 
 
 
     }
+
+
+
+
 }
